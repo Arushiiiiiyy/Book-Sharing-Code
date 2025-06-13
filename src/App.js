@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{ useState } from "react";
+import BookTable from "./BookTable";
+import FormPage from "./FormPage";
+import "./design.css";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [page,setPage]=useState("table");
+	const [books,setBooks]=useState([]);
+	//I dunno if we'll be needing above line 
+	const handleAddBook=(newBook)=>{
+		setBooks((prev)=>[...prev,newBook]);
+		setPage("table");
+	};
+	return (
+		<div>
+			{page==="table"?(
+				<BookTable books={books} onAddClick={()=>
+				setPage("form")}/>
+				):(
+					<FormPage onSubmit={handleAddBook} onCancel={()=>
+					setPage("table")}/>
+				
+			)}
+		</div>
+	);
+	
 }
-
 export default App;

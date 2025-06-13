@@ -1,0 +1,43 @@
+#top_strip {
+    background-color: navy;
+    padding: 8px;
+    color: white; /* Added for better visibility of text */
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+}
+
+#top_strip p{
+    margin-left:50px;
+    font-size:30px;
+}
+
+#buttony{
+    margin-left:750px;
+    padding-top:0.4px;
+    font-size:20px;
+}
+
+#formbox{
+    padding: 40px 32px 24px 32px;
+    background: rgb(56, 32, 5); 
+    box-shadow: 0 10px 32px rgba(44, 62, 80, 0.14); 
+    border-radius:18px;
+    max-width: 350px;
+    width: 100%;
+    color:yellow;
+    font-size:25px;
+    margin-left:287px;
+    margin-top:190px;
+    
+}
+
+input[type="text"]{
+    display:block;
+    width:100%;
+    padding: 10px 11px;    
+    margin-bottom: 10px;  
+    font-size: 1.0rem;    /* Bigger text */
+    background: blanchedalmond;
+    box-sizing: border-box;
+}
